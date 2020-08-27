@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      function validar(){
+        let form = document.form;
+
+        if(form.nombre.value == 0){
+          alert('escribe tu nombre')
+          form.nombre.value="";
+          form.nombre.focus();
+          return false
+        }
+        if(form.apellido.value == 0){
+          alert('escribe tu apellido')
+          form.apellido.value="";
+          form.apellido.focus();
+          return false
+        }
+        if(form.edad.value == 0){
+          alert('escribe tu edad')
+          form.edad.value="";
+          form.edad.focus();
+          return false
+        }
+        if(form.correo.value == 0){
+          alert('escribe tu email')
+          form.correo.value="";
+          form.correo.focus();
+          return false
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="form" action="#" method="post" onsubmit="return validar();">
+      Nombre: <input type="text" name="nombre" maxlength="12"><br>
+      Apellido: <input type="text" name="apellido" maxlength="10"><br>
+      Edad: <input type="number" name="edad" maxlength="10"><br>
+      Email: <input type="email" name="correo" maxlength="11"><br>
+      <br>
+      <button onclick="validar();">Enviar Datos</button>
+     </form>
+  </body>
+</html>
